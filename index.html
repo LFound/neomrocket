@@ -1,91 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeomRocket.com | The Future Launchpad</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeomRocket - Future of Innovation</title>
+  <style>
     body {
-        margin: 0;
-        padding: 0;
-        background-color: black;
-        color: white;
-        font-family: 'Arial', sans-serif;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        overflow: hidden;
-        position: relative;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
     }
-    .stars {
-        position: absolute;
-        width: 200%;
-        height: 200%;
-        background: transparent url('https://raw.githubusercontent.com/auroratide/starfield/master/starfield.png') repeat;
-        animation: moveStars 100s linear infinite;
-        z-index: 0;
-        opacity: 0.5;
+    header {
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease forwards;
     }
-    @keyframes moveStars {
-        from {transform: translate(0, 0);}
-        to {transform: translate(-50%, -50%);}
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      text-shadow: 0 0 15px #00ffff;
     }
-    h1, p, a, footer {
-        position: relative;
-        z-index: 1;
+    .rocket-image {
+      margin-top: 20px;
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1s;
     }
-    h1 {
-        font-size: 2.5em;
-        margin-bottom: 0.5em;
-        text-shadow: 0 0 10px #00ffff;
-    }
-    p {
-        font-size: 1.2em;
-        max-width: 800px;
-        margin-bottom: 1.5em;
-        line-height: 1.5;
+    section {
+      margin-top: 30px;
+      max-width: 800px;
+      line-height: 1.6;
+      font-size: 1.2em;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 2s;
     }
     .button {
-        background-color: #00ffff;
-        color: black;
-        padding: 12px 25px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        font-size: 1.1em;
-        transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #00ffff;
+      color: black;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background 0.3s ease;
     }
     .button:hover {
-        background-color: #00cccc;
+      background-color: #00cccc;
     }
     footer {
-        margin-top: 40px;
-        font-size: 0.9em;
-        color: #777;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
     }
-</style>
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
+
 <body>
-<div class="stars"></div>
-    <h1>NEOMROCKET.COM</h1>
-    <p><strong>The Future Launchpad for Space Innovation</strong></p>
 
-    <p>As Saudi Arabia accelerates its ambitions in aerospace and advanced technology, NEOM stands at the heart of a new era. 
-    <br><br><em>NeomRocket.com</em> captures the future — a premium brand-ready asset for those who see beyond Earth.</p>
+  <header>
+    <h1>NeomRocket</h1>
+  </header>
 
-    <p>Saudi Arabia’s Vision 2030 is investing billions into tech, aerospace, and futuristic innovation. 
-    NEOM will be the symbol of humanity’s next leap — and space will be part of that frontier.
-    <br><br>Secure the brand before the race takes off.</p>
+  <!-- Rocket Image -->
+  <img src="rocketlaunch.jpg" alt="Rocket Launch" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
 
-    <a href="mailto:youremail@example.com" class="button">Inquire Now</a>
+  <section>
+    <p>Positioned at the frontier of innovation, <strong>NeomRocket</strong> envisions the future of aerospace, technology, and limitless exploration.  
+    As NEOM emerges as a hub for disruptive industries, opportunities in next-generation transportation — including space travel — are accelerating.</p>
 
-    <footer>
-        Future updates and insights coming soon.
-    </footer>
+    <p>Secure your place at the intersection of ambition and investment with NeomRocket.</p>
+
+    <a href="mailto:youremail@example.com" class="button">Enquire Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 NeomRocket. All rights reserved.
+  </footer>
 
 </body>
 </html>
