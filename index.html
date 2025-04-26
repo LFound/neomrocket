@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NeomRocket.com - Igniting the Future</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeomRocket.com</title>
+    <style>
+        /* Basic reset and universal styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
 
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      background: radial-gradient(ellipse at bottom, #0D1B2A 0%, #000000 100%);
-      font-family: 'Orbitron', sans-serif;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+        /* Background: Space animation */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.pixabay.com/photo/2017/09/16/12/43/stars-2750952_960_720.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: starfield 120s linear infinite;
+        }
 
-    h1 {
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 0 0 10px #00ffff;
-    }
+        @keyframes starfield {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
 
-    p {
-      font-size: 1.5em;
-      margin-top: 10px;
-      color: #cccccc;
-      text-shadow: 0 0 5px #00ffff;
-    }
+        /* Content container */
+        .container {
+            position: relative;
+            z-index: 10;
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-    .stars {
-      width: 200%;
-      height: 200%;
-      background: transparent url('https://raw.githubusercontent.com/kevin-powell/space-background/main/stars.png') repeat;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      animation: moveStars 100s linear infinite;
-      z-index: -1;
-    }
+        h1 {
+            font-size: 4em;
+            color: #00ffcc;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
 
-    @keyframes moveStars {
-      0% {transform: translate(0, 0);}
-      100% {transform: translate(50px, 50px);}
-    }
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
 
-    .button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      color: #00ffff;
-      border: 2px solid #00ffff;
-      background: transparent;
-      border-radius: 5px;
-      text-decoration: none;
-      text-shadow: 0 0 5px #00ffff;
-      transition: background 0.3s, color 0.3s;
-    }
+        .button {
+            font-size: 1.2em;
+            padding: 15px 30px;
+            color: #fff;
+            background-color: #00ffcc;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
 
-    .button:hover {
-      background: #00ffff;
-      color: #000;
-    }
-    @media (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
-  
-  .button {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-}
-  </style>
+        .button:hover {
+            background-color: #009e99;
+            transform: scale(1.1);
+        }
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+        /* Responsive mobile styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            .button {
+                padding: 12px 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="stars"></div>
+    <div class="stars"></div>
 
-  <h1>NeomRocket.com</h1>
-  <p>Igniting the Future of Space Travel</p>
-  <a href="#" class="button">Launching Soon</a>
-
+    <div class="container">
+        <h1>NeomRocket.com</h1>
+        <p>Welcome to the future of space travel. As Neom emerges as the epicenter for innovation, we are set to ignite the stars with a new wave of space exploration, sustainability, and technology.</p>
+        <p>Get ready for a rocket revolution — designed, built, and launched in Neom, the world's most futuristic city.</p>
+        <a href="#" class="button">Join the Launch</a>
+    </div>
 </body>
 </html>
