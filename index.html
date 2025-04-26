@@ -5,57 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeomRocket.com | The Future Launchpad</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            background-image: radial-gradient(white 1px, transparent 1px),
-                              radial-gradient(white 1px, transparent 1px);
-            background-size: 50px 50px;
-            background-position: 0 0, 25px 25px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            text-shadow: 0 0 10px #00ffff;
-        }
-        p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin-bottom: 1.5em;
-            line-height: 1.5;
-        }
-        .button {
-            background-color: #00ffff;
-            color: black;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: background 0.3s ease;
-        }
-        .button:hover {
-            background-color: #00cccc;
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-family: 'Arial', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+    .stars {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: transparent url('https://raw.githubusercontent.com/auroratide/starfield/master/starfield.png') repeat;
+        animation: moveStars 100s linear infinite;
+        z-index: 0;
+        opacity: 0.5;
+    }
+    @keyframes moveStars {
+        from {transform: translate(0, 0);}
+        to {transform: translate(-50%, -50%);}
+    }
+    h1, p, a, footer {
+        position: relative;
+        z-index: 1;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        text-shadow: 0 0 10px #00ffff;
+    }
+    p {
+        font-size: 1.2em;
+        max-width: 800px;
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+    }
+    .button {
+        background-color: #00ffff;
+        color: black;
+        padding: 12px 25px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 1.1em;
+        transition: background 0.3s ease;
+    }
+    .button:hover {
+        background-color: #00cccc;
+    }
+    footer {
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #777;
+    }
+</style>
 </head>
 <body>
-
+<div class="stars"></div>
     <h1>NEOMROCKET.COM</h1>
     <p><strong>The Future Launchpad for Space Innovation</strong></p>
 
