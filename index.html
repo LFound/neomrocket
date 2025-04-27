@@ -46,10 +46,11 @@
       padding: 20px;
       overflow-x: hidden;
     }
+
     /* Sale Banner */
     .sale-banner {
       background-color: #00ffff;
-      padding: 15px;
+      padding: 10px;
       color: black;
       text-align: center;
       font-weight: bold;
@@ -61,6 +62,7 @@
       z-index: 1000;
       box-sizing: border-box;
       white-space: nowrap;
+      overflow: hidden;
     }
     .sale-banner a {
       color: black;
@@ -161,8 +163,18 @@
       }
       /* Ensuring banner is responsive */
       .sale-banner {
-        font-size: 1em; /* Make font slightly smaller on mobile */
-        padding: 10px;
+        font-size: 1em; /* Reduce font size on mobile */
+        padding: 8px;
+        white-space: normal; /* Allow text to wrap */
+        overflow: hidden; /* Ensure no overflow */
+        text-align: center; /* Center-align the banner text */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sale-banner {
+        font-size: 0.9em; /* Make the font size even smaller for very small screens */
+        padding: 6px;
       }
     }
   </style>
