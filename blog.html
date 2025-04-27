@@ -82,31 +82,52 @@
       animation-delay: 2s;
     }
 
+    /* Titles between paragraphs - Make headings stand out more */
+    h3 {
+      font-size: 1.8em;  /* Larger size for better visibility */
+      color: #00ffff; /* Neon blue or a contrasting color */
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Adds some glowing effect */
+    }
+
     footer {
       margin-top: 50px;
       font-size: 0.9em;
       color: #777;
     }
 
-    /* Hover effect for the claim button */
+    /* Hyperlinks - More contrast against background */
+    a {
+      color: #00ffff; /* Brighter blue color for better contrast */
+      text-decoration: none; /* Removing underline for cleaner look */
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0099cc; /* A deeper shade on hover for interactivity */
+      text-decoration: underline; /* Underline on hover to signal clickability */
+    }
+
+    /* Button style adjustments for clarity */
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: #00ffff;
       color: black;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
       margin-top: 20px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
     .button:hover {
-      transform: scale(1.1);
-      background-color: #0099cc;
+      transform: scale(1.05);
+      background-color: #0099cc; /* Slightly darker on hover */
     }
 
-    /* Source list styling */
+    /* Source list styling - Align left */
     ul {
       list-style-type: none;
       padding-left: 0;
@@ -123,7 +144,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-  </style>
+</style>
 </head>
 
 <body>
