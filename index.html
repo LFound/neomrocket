@@ -59,6 +59,8 @@
       left: 0;
       width: 100%;
       z-index: 1000;
+      box-sizing: border-box;
+      white-space: nowrap;
     }
     .sale-banner a {
       color: black;
@@ -156,6 +158,11 @@
       .button {
         width: 100%;
         padding: 15px;
+      }
+      /* Ensuring banner is responsive */
+      .sale-banner {
+        font-size: 1em; /* Make font slightly smaller on mobile */
+        padding: 10px;
       }
     }
   </style>
