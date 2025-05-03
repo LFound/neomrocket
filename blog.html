@@ -102,6 +102,27 @@ body {
   font-weight: normal;
   text-decoration: underline;
 }
+    .navbar {
+  position: fixed;
+  top: 40px; /* below sale banner */
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 0;
+  z-index: 999;
+}
+.navbar a {
+  color: #00ffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00cccc;
+}
 
     header {
       margin-top: 80px;
@@ -209,6 +230,12 @@ body {
     <strong>For Sale: NEOMrocket.com - A Prime Domain for the Future of Aerospace</strong>
     <a href="mailto:info@neomrocket.com">Inquire Now</a>
   </div>
+
+  <nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="privacy.html">Privacy Policy</a>
+</nav>
 
   <!-- Blog Header -->
   <header>
