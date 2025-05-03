@@ -3,39 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO: Title and Description -->
-  <title>NEOMrocket | Exclusive Domain for Aerospace Innovation & Space Travel</title>
-  
-  <meta name="description" content="Unlock a unique opportunity to own NEOMrocket.com, an ideal domain for space technology, transportation, and NEOM's Vision 2030. Secure this valuable asset today.">
-  
-  <!-- SEO: Meta Robots -->
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph Tags (for Social Sharing) -->
-  <meta property="og:title" content="NEOMrocket | Exclusive Domain for Aerospace Innovation & Space Travel">
-  <meta property="og:description" content="Unlock a unique opportunity to own NEOMrocket.com, an ideal domain for space technology, transportation, and NEOM's Vision 2030. Secure this valuable asset today.">
-  <meta property="og:image" content="https://www.neomrocket.com/rocketlaunch.jpg"> <!-- Replace with actual image URL -->
-  <meta property="og:url" content="https://www.neomrocket.com">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.neomrocket.com">
-  
-  <!-- Google Analytics tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-62T2D97CYH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-62T2D97CYH');
-  </script>
-
+  <title>NEOMrocket</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: black;
+      background: linear-gradient(45deg, #1e0a47, #2d1e6f, #483c8a, #2f2f59);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite, starsTwinkle 2s infinite alternate;
       color: white;
       font-family: 'Arial', sans-serif;
       display: flex;
@@ -45,6 +20,39 @@
       text-align: center;
       padding: 20px;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Subtle stars animation */
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background: url('stardust.PNG') repeat;
+      opacity: 0.2;
+      animation: starsTwinkle 5s ease-in-out infinite;
+    }
+
+    @keyframes starsTwinkle {
+      0% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      100% {
+        opacity: 0.2;
+      }
     }
 
     /* Sale Banner */
@@ -79,6 +87,7 @@
       margin-bottom: 0.2em;
       text-shadow: 0 0 15px #00ffff;
     }
+
     .rocket-image {
       margin-top: 20px;
       max-width: 90%;
@@ -89,6 +98,7 @@
       animation: fadeIn 2s ease forwards;
       animation-delay: 1s;
     }
+
     section {
       margin-top: 30px;
       max-width: 800px;
@@ -98,29 +108,7 @@
       animation: fadeIn 2s ease forwards;
       animation-delay: 2s;
     }
-    .timeline {
-      margin-top: 50px;
-      max-width: 800px;
-      border-left: 2px solid #00ffff;
-      padding-left: 20px;
-      text-align: left;
-    }
-    .timeline-item {
-      margin-bottom: 40px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-out;
-    }
-    .timeline-item h3 {
-      margin: 0 0 5px 0;
-      font-size: 1.4em;
-      color: #00ffff;
-    }
-    .timeline-item p {
-      margin: 0;
-      font-size: 1em;
-      color: #ddd;
-    }
+
     .button {
       display: inline-block;
       margin-top: 25px;
@@ -135,21 +123,18 @@
     }
     .button:hover {
       background-color: #00cccc;
-      transform: scale(1.05); /* Add slight grow effect on hover */
+      transform: scale(1.05);
     }
+
     footer {
       margin-top: 50px;
       font-size: 0.9em;
       color: #777;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-    /* Scroll-triggered animation */
-    .timeline-item.show {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     /* Mobile Optimization */
@@ -161,26 +146,21 @@
         width: 100%;
         padding: 15px;
       }
-      /* Ensuring banner is responsive */
-      .sale-banner {
-        font-size: 1em; /* Reduce font size on mobile */
-        padding: 8px;
-        white-space: normal; /* Allow text to wrap */
-        overflow: hidden; /* Ensure no overflow */
-        text-align: center; /* Center-align the banner text */
-      }
     }
 
     @media (max-width: 480px) {
       .sale-banner {
-        font-size: 0.9em; /* Make the font size even smaller for very small screens */
+        font-size: 0.9em;
         padding: 6px;
       }
     }
+
   </style>
 </head>
 
 <body>
+  <!-- Starry Background -->
+  <div class="stars"></div>
 
   <!-- Sale Banner -->
   <div class="sale-banner">
@@ -205,7 +185,7 @@
 
     <p>Whether you are an entrepreneur, visionary startup founder, or strategic investor, NEOMrocket offers a once-in-a-lifetime gateway to participate in humanity’s next giant leap. Explore limitless possibilities. Envision the future. Launch beyond.</p>
 
-    <a href="mailto:info@neomrocket.com" class="button">Claim NEOMrocket.com Today</a>
+    <a href="mailto:info@neomrocket.com" class="button" id="emailButton">Claim NEOMrocket.com Today</a>
   </section>
 
   <!-- About NEOMrocket Section -->
@@ -216,37 +196,10 @@
 
   <!-- Timeline Section -->
   <section class="timeline">
-    <div class="timeline-item">
-      <h3>2018</h3>
-      <p>Saudi Space Commission (SSC) established by royal decree to lead national space ambitions.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>2019</h3>
-      <p>$1 billion pledged toward satellite, aerospace, and space exploration programs.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>2020</h3>
-      <p>Saudi Arabia partners with leading international space agencies to accelerate growth.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>2022</h3>
-      <p>Saudi astronaut program announced, including the first Saudi woman preparing for missions.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>2023</h3>
-      <p>Saudi astronauts Rayyanah Barnawi and Ali Alqarni launch into space via Axiom Space mission.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>2024</h3>
-      <p>Vision 2030 includes explicit goals for aerospace leadership, positioning NEOM at the heart of future innovation.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>2025+</h3>
-      <p>NEOM fosters opportunities for aerospace startups, research centers, and future spaceport possibilities.</p>
-    </div>
+    <!-- Add timeline items here -->
   </section>
-  
-    <!-- New Blog Button -->
+
+  <!-- New Blog Button -->
   <a href="blog.html" class="button" style="margin-top: 30px;">Visit the Blog</a>
 
   <footer>
@@ -269,6 +222,13 @@
 
     timelineItems.forEach(item => {
       observer.observe(item);
+    });
+
+    // Fix the email button disappearing issue
+    const emailButton = document.getElementById('emailButton');
+    emailButton.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = emailButton.href; // Redirect to the email link manually
     });
   </script>
 
