@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NEOMrocket</title>
   <style>
-    body {
+    * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  padding: 80px 20px 20px 20px; /* Top padding offsets the fixed banner height */
   background-color: black;
   background-image: radial-gradient(circle at 20% 30%, #1c1b40 0%, transparent 40%),
                     radial-gradient(circle at 80% 70%, #301860 0%, transparent 50%);
@@ -21,7 +25,6 @@
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  padding: 20px;
   overflow-x: hidden;
   position: relative;
 }
@@ -49,26 +52,25 @@
 
     /* Sale Banner */
     .sale-banner {
-      background-color: #00ffff;
-      padding: 10px;
-      color: black;
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.2em;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      box-sizing: border-box;
-      white-space: nowrap;
-      overflow: hidden;
-    }
+  background-color: #00ffff;
+  padding: 10px 20px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
     .sale-banner a {
-      color: black;
-      font-weight: normal;
-      text-decoration: underline;
-    }
+  color: black;
+  font-weight: normal;
+  text-decoration: underline;
+}
 
     header {
       margin-top: 80px;
