@@ -4,40 +4,198 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | NEOMrocket</title>
-
-  <!-- SEO Meta Tags -->
   <meta name="description" content="Review NEOMrocket's Privacy Policy and learn how we collect, use, and protect your information when using our site." />
   <meta name="robots" content="noindex, follow" />
-
-  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Privacy Policy | NEOMrocket" />
   <meta property="og:description" content="Understand how NEOMrocket handles your personal data with full transparency." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.neomrocket.com/privacy.html" />
   <meta property="og:image" content="https://www.neomrocket.com/rocketlaunch.jpg" />
 
-  <!-- Styles (inherits your existing site styling) -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 80px 20px 20px 20px;
+      background-color: black;
+      background-image: radial-gradient(circle at 20% 30%, #1c1b40 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, #301860 0%, transparent 50%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background: url('stardust.PNG') repeat;
+      opacity: 0.1;
+      animation: starsTwinkle 5s ease-in-out infinite;
+    }
+
+    @keyframes starsTwinkle {
+      0% { opacity: 0.08; }
+      50% { opacity: 0.12; }
+      100% { opacity: 0.08; }
+    }
+
+    .sale-banner {
+      background-color: #00ffff;
+      padding: 6px 10px;
+      color: black;
+      text-align: center;
+      font-weight: 500;
+      font-size: 0.9em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-sizing: border-box;
+      white-space: normal;
+      overflow: hidden;
+    }
+
+    .sale-banner a {
+      color: black;
+      font-weight: normal;
+      text-decoration: underline;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 40px;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 8px 0;
+      z-index: 999;
+    }
+
+    .navbar a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1em;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00cccc;
+    }
+
+    header {
+      margin-top: 80px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    section {
+      margin-top: 30px;
+      max-width: 800px;
+      line-height: 1.6;
+      font-size: 1.2em;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    h2 {
+      color: #00ffff;
+      margin-top: 30px;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #00ffff;
+      color: black;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #00cccc;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .button {
+        width: 100%;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sale-banner {
+        font-size: 0.9em;
+        padding: 6px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Starry Background -->
   <div class="stars"></div>
 
-  <!-- Sale Banner -->
   <div class="sale-banner">
     <strong>For Sale: NEOMrocket.com - A Prime Domain for the Future of Aerospace</strong>
     <a href="mailto:info@neomrocket.com">Inquire Now</a>
   </div>
 
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
     <a href="privacy.html">Privacy Policy</a>
   </nav>
 
-  <!-- Page Header -->
   <header>
     <h1>Privacy Policy</h1>
   </header>
@@ -46,7 +204,7 @@
     <p><strong>Last updated:</strong> May 3, 2025</p>
 
     <p>
-      At <strong>NEOMrocket</strong>, your privacy matters. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website.
+      At <strong>NEOMrocket</strong>, your privacy matters. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website.
     </p>
 
     <h2>1. Information We Collect</h2>
@@ -70,11 +228,11 @@
     <h2>7. Contact</h2>
     <p>If you have questions about this policy, please email us at <a href="mailto:info@neomrocket.com">info@neomrocket.com</a>.</p>
 
-    <p style="margin-top: 30px;"><a href="index.html" class="button">Return to Home</a></p>
+    <a href="index.html" class="button">Return to Home</a>
   </section>
 
   <footer>
-    &copy; 2025 NEOMrocket. All rights reserved. <strong>For Sale</strong> | 
+    &copy; 2025 NEOMrocket. All rights reserved. <strong>For Sale</strong> |
     <a href="mailto:info@neomrocket.com">Inquire Now</a><br>
     <small>Visuals include royalty-free assets from Pixabay & TransparentTextures.com</small>
   </footer>
