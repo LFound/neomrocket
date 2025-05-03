@@ -180,6 +180,52 @@ body {
       font-size: 0.9em;
       color: #777;
     }
+   
+  /* Style for Timeline */
+.timeline {
+  margin: 50px 0;
+}
+
+.timeline-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  margin-bottom: 40px;
+}
+
+.timeline-item.show {
+  opacity: 1;
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.timeline-item:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -221,7 +267,7 @@ body {
   <a href="index.html">Home</a>
   <a href="blog.html">Blog</a>
   <a href="privacy.html">Privacy Policy</a>
-</nav>
+  </nav>
 
   <header>
     <h1>NEOMrocket</h1>
@@ -254,7 +300,35 @@ body {
 
   <!-- Timeline Section -->
   <section class="timeline">
-    <!-- Add timeline items here -->
+    <div class="timeline-item">
+      <h3>2020 – Launch of NEOM</h3>
+      <p>Saudi Arabia unveils NEOM as part of Vision 2030, focusing on creating a sustainable and tech-driven city. Space exploration is identified as a key component of NEOM’s long-term tech ecosystem.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2021 – Early Steps Toward Space Innovation</h3>
+      <p>Plans for a space innovation hub begin taking shape, with the government signaling interest in fostering satellite research and space technology development as part of NEOM’s broader tech ambitions.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2022 – Building Foundations for Space Infrastructure</h3>
+      <p>Investment into space-related technologies, including satellite communications and spaceport feasibility, starts to take shape. NEOM explores collaborations with global space-tech companies to lay the groundwork for future space missions and innovations.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2023 – Strategic Partnerships and Space Tech Growth</h3>
+      <p>NEOM strengthens partnerships with international space agencies and private sector players. Focus shifts to developing infrastructure such as a spaceport, satellite communication systems, and next-gen propulsion technology, positioning NEOM as an emerging space hub.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2024 – Commercial Space Ventures and Investment Surge</h3>
+      <p>NEOM’s spaceport infrastructure begins to take form, and early commercial space missions are planned. Investments ramp up in space tourism, satellite deployments, and lunar exploration, paving the way for substantial space industry growth in the region.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2025+ – A Global Space Hub in the Making</h3>
+      <p>By 2025, NEOM is poised to become a key player in the global space sector, with state-of-the-art space research facilities, thriving space startups, and planned missions to explore commercial space travel and lunar exploration. As investments continue to flow, NEOM solidifies its position as a major space-tech investment destination.</p>
+    </div>
   </section>
 
   <!-- New Blog Button -->
@@ -264,7 +338,7 @@ body {
   &copy; 2025 NEOMrocket. All rights reserved. <strong>For Sale</strong> | 
   <a href="mailto:info@neomrocket.com">Inquire Now</a><br>
   <small>Visuals include royalty-free assets from Pixabay & TransparentTextures.com</small>
-</footer>
+  </footer>
 
   <script>
     // Simple scroll animation
