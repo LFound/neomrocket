@@ -6,54 +6,46 @@
   <title>NEOMrocket</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(45deg, #1e0a47, #2d1e6f, #483c8a, #2f2f59);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite, starsTwinkle 2s infinite alternate;
-      color: white;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px;
-      overflow-x: hidden;
-      position: relative;
-    }
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-image: radial-gradient(circle at 20% 30%, #1c1b40 0%, transparent 40%),
+                    radial-gradient(circle at 80% 70%, #301860 0%, transparent 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+}
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+/* Subtle star field using transparent texture */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: url('images/stardust.png') repeat;
+  opacity: 0.1;
+  animation: starsTwinkle 5s ease-in-out infinite;
+}
 
-    /* Subtle stars animation */
-    .stars {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-      background: url('stardust.PNG') repeat;
-      opacity: 0.2;
-      animation: starsTwinkle 5s ease-in-out infinite;
-    }
-
-    @keyframes starsTwinkle {
-      0% {
-        opacity: 0.2;
-      }
-      50% {
-        opacity: 0.4;
-      }
-      100% {
-        opacity: 0.2;
-      }
-    }
+/* Gentle twinkle effect */
+@keyframes starsTwinkle {
+  0% { opacity: 0.08; }
+  50% { opacity: 0.12; }
+  100% { opacity: 0.08; }
+}
 
     /* Sale Banner */
     .sale-banner {
