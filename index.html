@@ -181,43 +181,47 @@ body {
       color: #777;
     }
    
-  /* Style for Timeline */
+ /* Style for Timeline */
 .timeline {
   margin: 50px 0;
 }
 
 .timeline-item {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.6s ease-in-out, transform 0.4s ease;
   margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  transform: translateY(20px);
 }
 
 .timeline-item.show {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .timeline-item h3 {
   font-size: 1.5rem;
   color: #00ffff;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .timeline-item p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #e0f7ff;
+  margin: 0;
+  background: none; /* Remove inner black background */
+  padding: 0;
+  box-shadow: none;
 }
 
-.timeline-item:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.timeline-item:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.5);
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 16px rgba(0, 255, 255, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -294,6 +298,8 @@ body {
     <h2 style="margin-top:50px; color:#00ffff;">About NEOMrocket</h2>
     <p><strong>NEOMrocket</strong> is an independent digital property inspired by the bold future of NEOM, Saudi Arabia’s city of innovation. As NEOM expands its footprint into aerospace, robotics, AI, and next-gen transportation, NEOMrocket stands ready to serve as a gateway for visionary projects and partnerships in the space sector and beyond. Built for entrepreneurs, investors, and pioneers of tomorrow, NEOMrocket is your launchpad to the stars.</p>
   </section>
+
+  <h2 style="margin-top:60px; color:#00ffff;">NEOM & Space: A Strategic Timeline Toward 2030</h2>
 
   <!-- Timeline Section -->
   <section class="timeline">
