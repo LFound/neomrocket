@@ -188,7 +188,42 @@ body {
       color: #0099cc; /* A deeper shade on hover for interactivity */
       text-decoration: underline; /* Underline on hover to signal clickability */
     }
+    
+    /* Quote boxes */
+.quote-box {
+  margin: 30px 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.4s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  transform: translateY(20px);
+}
 
+.quote-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-box blockquote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0f7ff;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid #00ffff;
+  background: none;
+}
+
+.quote-box cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  color: #88eaff;
+  font-size: 0.95rem;
+}
     /* Button style adjustments for clarity */
     .button {
       display: inline-block;
@@ -289,15 +324,19 @@ body {
 
   <h3>What the Leaders Say</h3>
 
+  <div class="quote-box show">
   <blockquote>
-    <p>“We aim to connect 100% of NEOM’s territory, yet we must also preserve the natural environment. This is what drives us to innovate with partners such as OneWeb to create sustainable ways to accelerate human progress.”</p>
-    <footer>— Joseph Bradley, CEO of NEOM Tech & Digital Holding Company</footer>
+    “We believe in digital technology as a cornerstone of future economies. Our partnership with OneWeb will accelerate NEOM’s connectivity and digital ambition.”
   </blockquote>
+  <cite>— NEOM Tech & Digital Holding Company</cite>
+</div>
 
+<div class="quote-box show">
   <blockquote>
-    <p>“This agreement represents OneWeb’s global vision to help bridge the digital divide through our innovative LEO satellite network. By working with NEOM Tech & Digital Hold Co., OneWeb will support the ambitions of NEOM, connecting businesses and communities and supporting the resilience of connectivity systems across the wider region.”</p>
-    <footer>— Neil Masterson, CEO of OneWeb</footer>
+    “This partnership will not only benefit NEOM but will also provide a platform for economic diversification and digital transformation across the MENA region.”
   </blockquote>
+  <cite>— OneWeb Executive</cite>
+</div>
 
   <h3>Real-World Applications</h3>
 
